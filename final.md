@@ -27,10 +27,10 @@
    Answer: 5
 
 3.  Which is a correct constructor call?
-   A.  `Scanner s = Scanner(System.in);`
-   B.  `Scanner s = new Scanner();`
-   C.  `Scanner s = new Scanner(System.in);`
-   D.  `new Scanner s(System.in);`
+   * A.  `Scanner s = Scanner(System.in);`
+   * B.  `Scanner s = new Scanner();`
+   * C.  `Scanner s = new Scanner(System.in);`
+   * D.  `new Scanner s(System.in);`
 
 ### Unit 2
 
@@ -51,7 +51,7 @@
    for (int i = 0; i < s.length(); i++)
       if (s.charAt(i) == 'n')
           System.out.print(i + " ");
-
+   ```
    Answer: "2 4"
 
 6.  What is printed?
@@ -66,10 +66,10 @@
 
 7.  Which question generates a random number from 1-4 inclusive?
 
-   A.  `(int)(Math.random() * 4)` 
-   B.  `(int)(Math.random() * 4) + 1`
-   C.  `(int)(Math.random() * 3) + 1`
-   D.  `(int)(Math.random() * 5)`
+   * A.  `(int)(Math.random() * 4)` 
+   * B.  `(int)(Math.random() * 4) + 1`
+   * C.  `(int)(Math.random() * 3) + 1`
+   * D.  `(int)(Math.random() * 5)`
 
    Answer: B
 
@@ -85,10 +85,10 @@
 
 9.  Which expression is equivalent to !(a >= 5 && a <= 10)?
 
-   A. a < 5 || a > 10
-   B. a < 5 && a > 10
-   C. !(a > 5 || a < 10)
-   D. a == 5 || a == 10
+   * A. a < 5 || a > 10
+   * B. a < 5 && a > 10
+   * C. !(a > 5 || a < 10)
+   * D. a == 5 || a == 10
 
    Answer: A
 

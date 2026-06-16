@@ -8,6 +8,9 @@
 * **LO 1.0.C** Understand that text is a series of numbers corresponding to the ASCII codebook
 * **LO 1.0.D** Review that all of this together with your program code is binary numbers in memory
 
+### Activity
+   * Count to 32 on one hand using binary
+   * Introduction to IntelliJ Java IDE, "Hello World" program
 
 ### Topic 1.1: Introduction to Algorithms, Programming, and Compilers
 * **LO 1.1.A:** Represent patterns and algorithms found in everyday life using written language or diagrams.
@@ -16,11 +19,6 @@
 * **LO 1.1.B:** Explain the code compilation and execution process.
     * **EK 1.1.B.1:** Code can be written in any text editor; however, an integrated development environment (IDE) is often used to write programs because it provides tools for a programmer to write, compile, and run code.
     * **EK 1.1.B.2:** A compiler checks code for some errors. Errors detectable by the compiler need to be fixed before the program can be run.
-
-### Activity
-    * Count to 32 on one hand using binary
-    * Introduction to IntelliJ Java IDE, "Hello World" program
-
 * **LO 1.1.C:** Identify types of programming errors.
     * **EK 1.1.C.1:** A syntax error is a mistake in the program where the rules of the programming language are not followed. These errors are detected by the compiler.
     * **EK 1.1.C.2:** A logic error is a mistake in the algorithm or program that causes it to behave incorrectly or unexpectedly. These errors are detected by testing the program with specific data to see if it produces the expected outcome.
@@ -48,6 +46,7 @@
     * **EK 1.3.C.1:** Arithmetic expressions, which consist of numeric values, variables, and operators, include expressions of type `int` and `double`.
 
 ### Activity
+   * Write a basic program declaring two ints and adding them together.  Extend to adding two doubles.
    * Write a program which tries to divide by 0 and fails
    * Write a program translating a math word problem into a series of variable assignments and arithmetic with them.  The program should output the intermediate results of the word problem as text and numbers while it executes.
    * Advanced:  additional word problems

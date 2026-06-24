@@ -1,6 +1,7 @@
 # AP Computer Science A Course Framework (Units 1–4)
 
 ## Unit 1: Using Objects and Methods
+## Jay Module 1:  Model of computation
 
 ### Topic 1.0:  Intro to a computer
 * **LO 1.0.A** Understand major components of a computer (CPU, RAM, input/output devices)
@@ -52,8 +53,9 @@
    * Advanced:  additional word problems
 
 ### Assessment:
-   * Glossary quiz.
+   * Glossary quiz:  CPU, Memory, Compiler, Expression
 
+## Jay Module 2:  Primitives and References
 ### Topic 1.4: Assignment Statements and Input
 * **LO 1.4.A:** Develop code for assignment statements with expressions and determine the value that is stored in the variable as a result of these statements.
     * **EK 1.4.A.1:** Every variable must be assigned a value before it can be used in an expression. That value must be from a compatible data type. A variable is initialized the first time it is assigned a value. Reference types can be assigned a new object or `null` if there is no object. The literal `null` is a special value used to indicate that a reference is not associated with any object.
@@ -68,7 +70,9 @@
 ### Activity:
    * Write a program which asks for the user's name, and then prints "Hello, `name`"
    * Write a program which prompts for 2 numbers and adds them.  
-   * Advanced:  Use a try/catch block to fall back to a default numeric value and inform the user.
+
+### Assessment:
+   * Look at various code blocks and understand reference vs value types
 
 ### Topic 1.5: Casting and Range of Variables
 * **LO 1.5.A:** Develop code to cast primitive values to different primitive types in arithmetic expressions and determine the value that is produced as a result.
@@ -90,15 +94,24 @@
     * **EK 1.6.A.2:** The post-increment operator `++` and post-decrement operator `--` are used to add 1 or subtract 1 from the stored value of a numeric variable. The new value is assigned to the variable.
         * *EXCLUSION STATEMENT:* The use of increment and decrement operators in prefix form (e.g., `++x`) is outside the scope of the AP Computer Science A course and exam. The use of increment and decrement operators inside other expressions (e.g., `arr[x++]`) is outside the scope of the AP Computer Science A course and exam.
 
+### Topic 1.15: String Manipulation
+* **LO 1.15.A:** Develop code to create string objects and determine the result of creating and combining strings.
+    * **EK 1.15.A.1:** A `String` object represents a sequence of characters and can be created by using a string literal or by calling the `String` class constructor.
+    * **EK 1.15.A.2:** The `String` class is part of the `java.lang` package. Classes in the `java.lang` package are available by default.
+    * **EK 1.15.A.3:** A `String` object is immutable, meaning once a `String` object is created, its attributes cannot be changed. 
+
 ### Activity:
     * Write programs demonstrating:
-       1. Integer overflow
-       2. Round-down of floats casted to ints
-       3. Round-down of integer division 
+       1. Basic casting
+       2. Integer overflow
+       3. Round-down of floats casted to ints
+       4. Round-down of integer division 
     * Another word-problem to variable math activity, based around floating points
 
 ### Assessment
     * Quiz of AP style multiple choice questions covering:  variable assignment, arithmetic operations, compound assignment, string concatenation.  Most will end with "what is the value of variable `x` now, or 'what does the program print'"
+
+## Jay Module 3:  Writing and calling functions
 
 ### Topic 1.9: Method Signatures
 * **LO 1.9.A:** Identify the correct method to call based on documentation and method signatures.
@@ -116,10 +129,17 @@
     * **EK 1.10.A.1:** Class methods are associated with the class, not instances of the class. Class methods include the keyword `static` in the header before the method name.
     * **EK 1.10.A.2:** Class methods are typically called using the class name along with the dot operator. When the method call occurs in the defining class, the use of the class name is optional in the call.
 
+### Topic 1.10.1:  Class variables
+* **LO1.10.1.A** Declare and mutate static class variables
+
 ### Activity
-    * Write programs with static methods to simplify repetitive code printing things
+    * Write programs with static methods to simplify repetitive code printing a text pattern
     * Write a program with static methods to represent pieces of a math word problem.  Use static class variables to represent shared mutable state.
 
+### Assessment
+    * AP style long-form exercise, main function provided calling static methods that do arithmetic.  Comments specifying what it expects them to do and the result to be.  Students write signatures and bodies of static methods.
+
+## Jay Module 4:  APIs and Standard Library
 ### Topic 1.7: Application Program Interface (API) and Libraries
 * **LO 1.7.A:** Identify the attributes and behaviors of a class found in the libraries contained in an API.
     * **EK 1.7.A.1:** Libraries are collections of classes. An application programming interface (API) specification informs the programmer how to use those classes. Documentation found in API specifications and libraries is essential to understanding the attributes and behaviors of a class defined by the API. A class defines a specific reference type. Classes in the APIs and libraries are grouped into packages. Existing classes and class libraries can be utilized to create objects.
@@ -143,13 +163,15 @@
     * **EK 1.11.A.3:** The values returned from `Math.random()` can be manipulated using arithmetic and casting operators to produce a random `int` or `double` in a defined range based on specified criteria. Each endpoint of the range can be inclusive, meaning the value is included, or exclusive, meaning the value is not included.
 
 ### Activity
-    * Bigger project:  write our first game!  It's a dice game based on Craps but only for 3 iterations after the point is rolled, it's called a draw if no 7 or point after 3 iterations
-       1. Methods:  rollDie(int numSides), rollCrapsDice(), runIteration(int point)
-       2. Provide students with descriptions of what methods above will do and how they'll be called from Main, give them an outline to execute the project.
+    * Explore Math class by clicking through in IntelliJ.  Note javadoc.
+    * Exercise various math functions
+    * Use some larger numbers to highlight floating point instability
 
 ### Assessment
     * Quiz of AP style multiple-choice questions, based around functions.  Students get Math API reference.
+
 ## Unit 2: Selection and Iteration
+## Jay Module 5:  If statements
 
 ### Topic 2.1: Algorithms with Selection and Repetition
 * **LO 2.1.A:** Represent patterns and algorithms that involve selection and repetition found in everyday life using written language or diagrams.
@@ -181,21 +203,10 @@
     * **EK 2.4.A.2:** The Boolean expression of the inner nested `if` statement is evaluated only if the Boolean expression of the outer `if` statement evaluates to true.
     * **EK 2.4.A.3:** A multiway selection (`if-else-if`) is used when there are a series of expressions with different segments of code for each condition. Multiway selection is performed such that no more than one segment of code is executed based on the first expression that evaluates to true. If no expression evaluates to true and there is a trailing `else` statement, then the body of the `else` is executed.
 
-### Topic 2.5: Compound Boolean Expressions
-* **LO 2.5.A:** Develop code to represent compound Boolean expressions and determine the result of these expressions.
-    * **EK 2.5.A.1:** Logical operators `!` (not), `&&` (and), and `||` (or) are used with Boolean expressions. The expression `!a` evaluates to `true` if `a` is `false` and evaluates to `false` otherwise. The expression `a && b` evaluates to `true` if both `a` and `b` are `true` and evaluates to `false` otherwise. The expression `a || b` evaluates to `true` if `a` is `true`, `b` is `true`, or both, and evaluates to `false` otherwise. The order of precedence for evaluating logical operators is `!` (not), `&&` (and), then `||` (or). An expression involving logical operators evaluates to a Boolean value.
-    * **EK 2.5.A.2:** Short-circuit evaluation occurs when the result of a logical operation using `&&` or `||` can be determined by evaluating only the first Boolean expression. In this case, the second Boolean expression is not evaluated.
+### Activity
+    * Write a program that gives the user a quiz, and judges if they responded correctly.
 
-### Topic 2.6: Comparing Boolean Expressions
-* **LO 2.6.A:** Compare equivalent Boolean expressions.
-    * **EK 2.6.A.1:** Two Boolean expressions are equivalent if they evaluate to the same value in all cases. Truth tables can be used to prove Boolean expressions are equivalent.
-    * **EK 2.6.A.2:** De Morgan's law can be applied to Boolean expressions to create equivalent Boolean expressions. Under De Morgan's law, the Boolean expression `!(a && b)` is equivalent to `!a || !b` and the Boolean expression `!(a || b)` is equivalent to `!a && !b`.
-* **LO 2.6.B:** Develop code to compare object references using Boolean expressions and determine the result of these expressions.
-    * **EK 2.6.B.1:** Two different variables can hold references to the same object. Object references can be compared using `==` and `!=`.
-    * **EK 2.6.B.2:** An object reference can be compared with `null`, using `==` or `!=`, to determine if the reference actually references an object.
-    * **EK 2.6.B.3:** Classes often define their own `equals` method, which can be used to specify the criteria for equivalency for two objects of the class. The equivalency of two objects is most often determined using attributes from the two objects.
-        * *EXCLUSION STATEMENT:* Overriding the `equals` method is outside the scope of the AP Computer Science A course and exam.
-
+## Jay Module 6: Loops
 ### Topic 2.7: while Loops
 * **LO 2.7.A:** Identify when an iterative process is required to achieve a desired result.
     * **EK 2.7.A.1:** Iteration is a form of repetition. Iteration statements change the flow of control by repeating a segment of code zero or more times as long as the Boolean expression controlling the loop evaluates to true.
@@ -211,6 +222,36 @@
     * **EK 2.8.A.2:** In a `for` loop, the initialization statement is only executed once before the first Boolean expression evaluation. The variable being initialized is referred to as a loop control variable. The Boolean expression is evaluated immediately after the loop control variable is initialized and then following each execution of the increment statement until it is false. In each iteration, the update is executed after the entire loop body is executed and before the Boolean expression is evaluated again.
     * **EK 2.8.A.3:** A `for` loop can be rewritten into an equivalent `while` loop (and vice versa).
 
+## Activity
+    * First big project:  Craps game:  Roll point, continue rolling until win or loss.
+    * Big project add-on:  Repeated games, maintain balance, bet an amount per game.
+
+## Assessment:  Semester 1 midterm after first big project (would prefer after 8 if we can get through material quicker)
+
+
+## Jay Module 7:  Advanced Booleans
+### Topic 2.5: Compound Boolean Expressions
+* **LO 2.5.A:** Develop code to represent compound Boolean expressions and determine the result of these expressions.
+    * **EK 2.5.A.1:** Logical operators `!` (not), `&&` (and), and `||` (or) are used with Boolean expressions. The expression `!a` evaluates to `true` if `a` is `false` and evaluates to `false` otherwise. The expression `a && b` evaluates to `true` if both `a` and `b` are `true` and evaluates to `false` otherwise. The expression `a || b` evaluates to `true` if `a` is `true`, `b` is `true`, or both, and evaluates to `false` otherwise. The order of precedence for evaluating logical operators is `!` (not), `&&` (and), then `||` (or). An expression involving logical operators evaluates to a Boolean value.
+    * **EK 2.5.A.2:** Short-circuit evaluation occurs when the result of a logical operation using `&&` or `||` can be determined by evaluating only the first Boolean expression. In this case, the second Boolean expression is not evaluated.
+
+### Topic 2.6: Comparing Boolean Expressions
+* **LO 2.6.A:** Compare equivalent Boolean expressions.
+    * **EK 2.6.A.1:** Two Boolean expressions are equivalent if they evaluate to the same value in all cases. Truth tables can be used to prove Boolean expressions are equivalent.
+    * **EK 2.6.A.2:** De Morgan's law can be applied to Boolean expressions to create equivalent Boolean expressions. Under De Morgan's law, the Boolean expression `!(a && b)` is equivalent to `!a || !b` and the Boolean expression `!(a || b)` is equivalent to `!a && !b`.
+* **LO 2.6.B:** Develop code to compare object references using Boolean expressions and determine the result of these expressions.
+    * **EK 2.6.B.1:** Two different variables can hold references to the same object. Object references can be compared using `==` and `!=`.
+    * **EK 2.6.B.2:** An object reference can be compared with `null`, using `==` or `!=`, to determine if the reference actually references an object.
+    * **EK 2.6.B.3:** Classes often define their own `equals` method, which can be used to specify the criteria for equivalency for two objects of the class. The equivalency of two objects is most often determined using attributes from the two objects.
+        * *EXCLUSION STATEMENT:* Overriding the `equals` method is outside the scope of the AP Computer Science A course and exam.
+
+### Activity 
+    * Convert compound boolean expressions to nested boolean expressions and vice versa
+
+### Assessment
+    * Quiz on whether various boolean expressions are equal to each other, or whether they evaluate to true or false
+   
+## Jay Module 8:  Algorithms with loops
 ### Topic 2.9: Implementing Selection and Iteration Algorithms
 * **LO 2.9.A:** Develop code for standard and original algorithms (without data structures) and determine the result of these algorithms.
     * **EK 2.9.A.1:** There are standard algorithms to:
@@ -227,6 +268,10 @@
         * determine the number of substrings that meet specific criteria
         * create a new string with the characters reversed
 
+### Activity:  Have class implement all algorithms from scratch, give hints only when stuck.
+### Assessment:  AP style multiple choice
+
+## Jay Module 9:  Algorithms continued
 ### Topic 2.11: Nested Iteration
 * **LO 2.11.A:** Develop code to represent nested iterative processes and determine the result of these processes.
     * **EK 2.11.A.1:** Nested iteration statements are iteration statements that appear in the body of another iteration statement. When a loop is nested inside another loop, the inner loop must complete all its iterations before the outer loop can continue to its next iteration.
@@ -235,8 +280,12 @@
 * **LO 2.12.A:** Calculate statement execution counts and informal run-time comparison of iterative statements.
     * **EK 2.12.A.1:** A statement execution count indicates the number of times a statement is executed by the program. Statement execution counts are often calculated informally through tracing and analysis of the iterative statements.
 
+## Activity:  Implement String algorithms, guess runtime together as a class
+## Assessment: AP style code writing
+
 ## Unit 3: Class Creation
 
+## Jay Module 10: Understanding Objects 
 ### Topic 1.12: Objects: Instances of Classes
 * **LO 1.12.A:** Explain the relationship between a class and an object.
     * **EK 1.13.A.1:** An object is a specific instance of a class  with defined attributes. A class is the formal  implementation, or blueprint, of the attributes and behaviors of an object.  * **EK 1.13.A.2:** A class contains constructors that are called to create objects. They have the same name as the class.
@@ -274,7 +323,9 @@
 ### Activity
     * Write some static methods which take a reference to a String, modify it and return a new reference.  Demonstrate difference between original reference and new reference after function executes.
     * Use StringBuilder to show the different between mutable and immutable objects, and demonstrate that two references to the same object are both impacted by changes to the underlying object.
+### Glossary quiz:  Object, Class, Instance, Method, Constructor, Function Overloading
 
+### Jay Module 11: Creating classes
 
 ### Topic 3.1: Abstraction and Program Design
 * **LO 3.1.A:** Represent the design of a program by using natural language or creating diagrams that indicate the classes in the program and the data and procedural abstractions found in each class by including all attributes and behaviors.
@@ -315,6 +366,11 @@
     * **EK 3.5.A.5:** An accessor method allows objects of other classes to obtain a copy of the value of instance variables or class variables. An accessor method is a non-void method.
     * **EK 3.5.A.6:** A mutator (modifier) method is a method that changes the values of the instance variables or class variables. A mutator method is often a `void` method.
 
+### Activity:  Write our first classes and invoke methods on them from main
+### Assessment:  AP style writing where students must fill out instance method bodies
+
+
+## Jay Module 12:  Classes continued
 ### Topic 3.6: Methods: Passing and Returning References of an Object
 * **LO 3.6.A:** Develop code to define behaviors of an object through methods written in a class using object references and determine the result of calling these methods.
     * **EK 3.6.A.1:** When an argument is an object reference, the parameter is initialized with a copy of that reference; it does not create a new independent copy of the object. If the parameter refers to a mutable object, the method or constructor can use this reference to alter the state of the object. It is good programming practice to not modify mutable objects that are passed as parameters unless required in the specification.
@@ -340,6 +396,9 @@
     * **EK 3.9.A.1:** Within an instance method or a constructor, the keyword `this` acts as a special variable that holds a reference to the current object—the object whose method or constructor is being called.
     * **EK 3.9.A.2:** The keyword `this` can be used to pass the current object as an argument in a method call.
     * **EK 3.9.A.3:** Class methods do not have a `this` reference.
+
+## Big Project:  Either Blackjack (with classes for cards) or a dungeon game (with classes for rooms)
+## End of semester 1 final
 
 ## Unit 4: Data Collections
 
